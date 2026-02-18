@@ -17,3 +17,23 @@
     }
   }
 }
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "dist/**"],
+      "env": [
+        "DATABASE_URL",
+        "BETTER_AUTH_SECRET",
+        "BLOB_READ_WRITE_TOKEN",
+        "KV_REST_API_READ_ONLY_TOKEN",
+        "KV_REST_API_TOKEN",
+        "KV_REST_API_URL",
+        "KV_URL",
+        "REDIS_URL",
+        "CHROMIUM_EXECUTABLE_PATH"
+      ]
+    }
+  }
+}
